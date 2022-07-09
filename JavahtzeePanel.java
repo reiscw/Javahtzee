@@ -361,7 +361,7 @@ public class JavahtzeePanel extends JPanel {
 	public boolean doubleCheck() {
 		if (danger()) {
 			String message = "Are you sure? Your game is not over!";
-			int result = JOptionPane.showConfirmDialog(null,  message, "Careful!", JOptionPane.OK_CANCEL_OPTION);
+			int result = JOptionPane.showConfirmDialog(null,  message, "Careful!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 			if (result == JOptionPane.OK_OPTION) {
 				return true;
 			} else {
@@ -701,7 +701,7 @@ public class JavahtzeePanel extends JPanel {
 			// ask user for name
 			JTextField nameEntry = new JTextField();
 			Object[] message = {"Enter your name: ", nameEntry};
-			int result = JOptionPane.showConfirmDialog(null,  message, "You got a high score!", JOptionPane.OK_CANCEL_OPTION);
+			int result = JOptionPane.showConfirmDialog(null,  message, "You got a high score!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 			String name = "";
 			if (result != JOptionPane.OK_CANCEL_OPTION) {
 				name = nameEntry.getText();
@@ -739,7 +739,7 @@ public class JavahtzeePanel extends JPanel {
 		JOptionPane.showConfirmDialog(null, label, "Javahtzee High Scores", JOptionPane.CLOSED_OPTION, JOptionPane.PLAIN_MESSAGE);
 		if (offerDelete) {
 			String message2 = "Do you want to reset your high scores?";
-			int result = JOptionPane.showConfirmDialog(null,  message2, "You are the master of Javahtzee!", JOptionPane.OK_CANCEL_OPTION);
+			int result = JOptionPane.showConfirmDialog(null,  message2, "You are the master of Javahtzee!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 			if (result == JOptionPane.OK_OPTION) {
 				highScores.clear();
 				writeHighScores();
@@ -790,7 +790,7 @@ public class JavahtzeePanel extends JPanel {
 	}
 
     public static void main (String[] args) throws FileNotFoundException {
-        JFrame frame = new JFrame("Javahtzee 4.0 by Christopher Reis");
+        JFrame frame = new JFrame("Javahtzee 4.1 by Christopher Reis");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JavahtzeePanel panel = new JavahtzeePanel();
         frame.getContentPane().add(panel);

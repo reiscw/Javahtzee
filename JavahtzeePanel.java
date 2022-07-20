@@ -84,10 +84,10 @@ public class JavahtzeePanel extends JPanel {
         add(undoButton);
         add(quitButton);
         undoButton.setEnabled(false);
-        newGameButton.setBounds(15, 410, 107, 25);
-        highScoresButton.setBounds(127, 410, 107, 25);
-        undoButton.setBounds(239, 410, 107, 25);
-        quitButton.setBounds(351, 410, 107, 25);
+        newGameButton.setBounds(15, 410, 127, 25);
+        highScoresButton.setBounds(147, 410, 127, 25);
+        undoButton.setBounds(279, 410, 87, 25);
+        quitButton.setBounds(371, 410, 87, 25);
         // single digit buttons
         singleDigitButtons = new JButton[6];
         String[] singleDigitButtonStrings = {"Ones", "Twos", "Threes", "Fours", "Fives", "Sixes"};
@@ -790,7 +790,7 @@ public class JavahtzeePanel extends JPanel {
 	}
 
     public static void main (String[] args) throws FileNotFoundException {
-        JFrame frame = new JFrame("Javahtzee 4.1 by Christopher Reis");
+        JFrame frame = new JFrame("Javahtzee 4.2 by Christopher Reis");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JavahtzeePanel panel = new JavahtzeePanel();
         frame.getContentPane().add(panel);

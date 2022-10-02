@@ -674,7 +674,6 @@ public class JavahtzeePanel extends JPanel {
 	public void endGame(int score) {
 		rollButton.setEnabled(false);
 		undoButton.setEnabled(false);
-		System.out.println("hello");
 		String message = "Your final Javahtzee score is " + score;
 		if (score >= 300) {
 			message = message + "\n" + "Wow, you broke 300!";
@@ -735,7 +734,7 @@ public class JavahtzeePanel extends JPanel {
 			message += "<BR>";
 		}
 		JLabel label = new JLabel(message);
-		label.setFont(new Font("Courier", Font.BOLD, 12));
+		label.setFont(new Font("Monospace", Font.BOLD, 12));
 		JOptionPane.showConfirmDialog(null, label, "Javahtzee High Scores", JOptionPane.CLOSED_OPTION, JOptionPane.PLAIN_MESSAGE);
 		if (offerDelete) {
 			String message2 = "Do you want to reset your high scores?";
@@ -790,7 +789,7 @@ public class JavahtzeePanel extends JPanel {
 	}
 
     public static void main (String[] args) throws FileNotFoundException {
-        JFrame frame = new JFrame("Javahtzee 4.2 by Christopher Reis");
+        JFrame frame = new JFrame("Javahtzee 4.3 by Christopher Reis");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JavahtzeePanel panel = new JavahtzeePanel();
         frame.getContentPane().add(panel);

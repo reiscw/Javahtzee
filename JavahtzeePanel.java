@@ -789,7 +789,7 @@ public class JavahtzeePanel extends JPanel {
 	}
 
     public static void main (String[] args) throws FileNotFoundException {
-        JFrame frame = new JFrame("Javahtzee 4.3 by Christopher Reis");
+        JFrame frame = new JFrame("Javahtzee 4.4 by Christopher Reis");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JavahtzeePanel panel = new JavahtzeePanel();
         frame.getContentPane().add(panel);

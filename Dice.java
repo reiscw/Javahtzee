@@ -8,6 +8,7 @@ public class Dice {
 	public static final int DOT_WIDTH = 13;
 	public static final Color ON_COLOR = Color.LIGHT_GRAY;
 	public static final Color OFF_COLOR = Color.BLACK;
+	public static final Color[] ON_COLORS = {Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.CYAN, Color.MAGENTA};
 	
 	public static final int[] CENTER = {SIZE/2 - (DOT_WIDTH-1)/2-1, SIZE/2 - (DOT_WIDTH-1)/2-1, DOT_WIDTH, DOT_WIDTH};
 	public static final int[] UPPER_LEFT = {SIZE/2 - SIZE/4 - (DOT_WIDTH-1)/2-1, SIZE/2 - SIZE/4 - (DOT_WIDTH-1)/2-1, DOT_WIDTH, DOT_WIDTH};
@@ -17,13 +18,13 @@ public class Dice {
 	public static final int[] CENTER_LEFT = {SIZE/2 - SIZE/4 - (DOT_WIDTH-1)/2-1, SIZE/2 - (DOT_WIDTH-1)/2-1, DOT_WIDTH, DOT_WIDTH};
 	public static final int[] CENTER_RIGHT = {SIZE/2 + SIZE/4 - (DOT_WIDTH-1)/2-1, SIZE/2 - (DOT_WIDTH-1)/2-1, DOT_WIDTH, DOT_WIDTH};
 
-	public static BufferedImage init(boolean negate) {
+	public static BufferedImage init(boolean negate, int number) {
 		BufferedImage result = new BufferedImage(SIZE, SIZE, BufferedImage.TYPE_INT_RGB);
 		Graphics2D graphic = (Graphics2D)result.getGraphics();
 		if (negate) {
 			graphic.setColor(OFF_COLOR);
 		} else {
-			graphic.setColor(ON_COLOR);
+			graphic.setColor(ON_COLORS[number-1]);
 		}
 		int[] x = {0, SIZE, SIZE, 0};
 		int[] y = {0, 0, SIZE, SIZE};
@@ -32,7 +33,7 @@ public class Dice {
 	}
 
 	public static BufferedImage one(boolean negate) {
-		BufferedImage result = init(negate);
+		BufferedImage result = init(negate, 1);
 		Graphics2D graphic = (Graphics2D)result.getGraphics();
 		if (negate) {
 			graphic.setColor(ON_COLOR);
@@ -44,7 +45,7 @@ public class Dice {
 	}
 	
 	public static BufferedImage two(boolean negate) {
-		BufferedImage result = init(negate);
+		BufferedImage result = init(negate, 2);
 		Graphics2D graphic = (Graphics2D)result.getGraphics();
 		if (negate) {
 			graphic.setColor(ON_COLOR);
@@ -57,7 +58,7 @@ public class Dice {
 	}
 
 	public static BufferedImage three(boolean negate) {
-		BufferedImage result = init(negate);
+		BufferedImage result = init(negate, 3);
 		Graphics2D graphic = (Graphics2D)result.getGraphics();
 		if (negate) {
 			graphic.setColor(ON_COLOR);
@@ -71,7 +72,7 @@ public class Dice {
 	}
 	
 	public static BufferedImage four(boolean negate) {
-		BufferedImage result = init(negate);
+		BufferedImage result = init(negate, 4);
 		Graphics2D graphic = (Graphics2D)result.getGraphics();
 		if (negate) {
 			graphic.setColor(ON_COLOR);
@@ -86,7 +87,7 @@ public class Dice {
 	}	
 
 	public static BufferedImage five(boolean negate) {
-		BufferedImage result = init(negate);
+		BufferedImage result = init(negate, 5);
 		Graphics2D graphic = (Graphics2D)result.getGraphics();
 		if (negate) {
 			graphic.setColor(ON_COLOR);
@@ -102,7 +103,7 @@ public class Dice {
 	}	
 
 	public static BufferedImage six(boolean negate) {
-		BufferedImage result = init(negate);
+		BufferedImage result = init(negate, 6);
 		Graphics2D graphic = (Graphics2D)result.getGraphics();
 		if (negate) {
 			graphic.setColor(ON_COLOR);

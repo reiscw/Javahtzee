@@ -5,3 +5,4 @@ Version 4.0 - Created Dice class to draw dice instead of using possibly propriet
 Version 4.1 - Removed icons from all JOptionPanes
 Version 4.2 - Fixed button size issue in Linux
 Version 4.3 - Switched "Courier" to "Monospace" for high score display and removed test printing to console
+Version 4.4 - Added colors to the dice

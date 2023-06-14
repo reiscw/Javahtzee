@@ -700,7 +700,7 @@ public class JavahtzeePanel extends JPanel {
 			// ask user for name
 			JTextField nameEntry = new JTextField();
 			Object[] message = {"Enter your name: ", nameEntry};
-			int result = JOptionPane.showConfirmDialog(null,  message, "You got a high score!", JOptionPane.OK_OPTION, JOptionPane.PLAIN_MESSAGE);
+			int result = JOptionPane.showConfirmDialog(null,  message, "You got a high score!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 			String name = "";
 			if (result == JOptionPane.OK_OPTION) {
 				name = nameEntry.getText();
@@ -789,7 +789,7 @@ public class JavahtzeePanel extends JPanel {
 	}
 
     public static void main (String[] args) throws FileNotFoundException {
-	        JFrame frame = new JFrame("Javahtzee 4.5 by Christopher Reis");
+	        JFrame frame = new JFrame("Javahtzee 4.6 by Christopher Reis");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JavahtzeePanel panel = new JavahtzeePanel();
         frame.getContentPane().add(panel);

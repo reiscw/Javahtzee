@@ -7,3 +7,4 @@ Version 4.2 - Fixed button size issue in Linux
 Version 4.3 - Switched "Courier" to "Monospace" for high score display and removed test printing to console
 Version 4.4 - Added colors to the dice
 Version 4.5 - Fixed minor JOptionPane issues
+Version 4.6 - Fixed minor JOptionPane issue
